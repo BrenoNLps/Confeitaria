@@ -5,7 +5,7 @@ import Main from "./Main_/Main";
 
 export default function Hero () {         
     return (
-        <section className="h-screen w-screen flex flex-col items-center justify-center bg-pink-200">
+        <section className="h-screen w-screen flex flex-col items-center justify-center bg-white">
             <Header />
             <Nav />
             <Main />
