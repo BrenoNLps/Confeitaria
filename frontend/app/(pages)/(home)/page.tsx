@@ -1,6 +1,6 @@
-import Header from "./components/common/Header"
-import Nav from "./components/common/Navbar"
-import Main from "./components/pages/Hero/content/Main"
+import Header from "../../components/common/Header"
+import Nav from "../../components/common/Navbar"
+import Main from "../../components/hero/Main"
 
 
 export default function Home() {
