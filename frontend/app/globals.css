@@ -46,3 +46,14 @@ body {
   justify-center
   bg-white
 }
+
+.main-content{
+  @apply
+  h-[90%] 
+  md:h-[80%] 
+  w-screen 
+  relative 
+  flex 
+  items-center 
+  bg-yellow-900
+}

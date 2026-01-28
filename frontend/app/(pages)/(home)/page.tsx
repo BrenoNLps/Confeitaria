@@ -1,14 +1,11 @@
-import Header from "../../components/common/Header"
-import Nav from "../../components/common/Navbar"
-import Main from "../../components/hero/Main"
-
+import SideRibbon from "../../components/hero/SideRibbon";
+import Container from "@/app/components/hero/Container";
 
 export default function Home() {
   return (
-        <div className="page-container">
-            <Header/>
-            <Nav/>
-            <Main/>
-        </div>
+    <main className="main-content">
+      <SideRibbon />
+      <Container />
+    </main>
   );
 }

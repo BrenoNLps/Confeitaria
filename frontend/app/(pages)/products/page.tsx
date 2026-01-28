@@ -1,14 +1,9 @@
-import Header from "../../components/common/Header";
-import Nav from "../../components/common/Navbar";
-import Main from "../../components/products/Main";
-
+import ProductsContainer from "../../components/products/ProductsContainer"
 
 export default function Products() {
     return (
-        <div className="page-container">
-            <Header/>
-            <Nav/>
-            <Main/>
-        </div>
+        <main className="main-content">
+            <ProductsContainer />
+        </main>
     );
 }   
