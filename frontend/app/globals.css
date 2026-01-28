@@ -35,3 +35,14 @@ body {
   flex
   ;
 }
+
+.page-container{
+  @apply 
+  h-screen 
+  w-screen 
+  flex 
+  flex-col 
+  items-center 
+  justify-center
+  bg-white
+}
