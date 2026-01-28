@@ -28,11 +28,10 @@ body {
 .title{
   @apply 
   font-bold
-  text-2xl 
+  text-[0.9rem]
   md:text-5xl
-  md:ml-10 
-  ml-2
-  md:w-[60%]
-  bg-yellow-600
+  w-full
+  items-start
+  flex
   ;
 }
