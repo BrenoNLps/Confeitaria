@@ -1,9 +1,12 @@
 export default function Header() {
     return (
-        <header className="h-[10%] w-screen flex items-center justify-center md:justify-start text-black text-4xl font-bold border-b-5  border-black">
-                <p className="md:ml-20 ml-0">&nbsp;Mari</p>
+        <header className="h-[15%] md:h-[10%] w-screen  text-[1.6rem] md:text-4xl font-bold border-b-5 flex items-center justify-center border-black text-black ">
+            <div className="w-[87.5%] h-full flex items-center justify-center md:justify-start">
+                <p>Mari L</p>
                 <img src="images/logo_bolo.png" alt="bolo_logo" className=" h-full" />
-                <p>Lopes</p>
+                <p>pes</p>
+            </div>
+
         </header>
     );
 }
