@@ -1,11 +1,16 @@
 export default function Article () {     
     return (
-        <article className="w-full h-[22%]  md:w-[55%] md:h-full flex flex-col justify-center items-center bg-white md:bg-transparent" id="main_text">
-            <h1 className="title text-pink-600 ">Confeitaria artesanal</h1>
-            <h2 className="title text-black ">feita com sabor, cuidado e qualidade</h2>
+        <article className="w-full h-[30%] md:flex-1 md:h-full flex flex-col justify-center items-center bg-white" id="main_text">
+            <div className="w-[70%]  flex flex-col justify-center md:items-start items-center">   
+                <h1 className="title text-pink-600 ">Confeitaria da Mari</h1>
+                <h2 className="title text-black ">Feito com sabor, cuidado e qualidade.</h2>
+
+                <button className="text-4xl mt-6 md:mt-10  font-bold rounded-4xl border-3 border-black bg-pink-600 text-white hover:bg-pink-800 transition-colors hidden md:block p-3 pl-5 pr-5">Ver Cardápio
+                </button>
+            </div>
+
             
-            <button className="md:ml-10 ml-2 mt-6 md:mt-10 w-[60%] md:w-[30%] h-12 font-bold rounded-3xl bg-pink-600 text-white hover:bg-pink-800 transition-colors hidden md:block">Ver Produtos
-            </button>
+
         </article>
     );
 }
