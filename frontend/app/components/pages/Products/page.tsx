@@ -1,4 +1,4 @@
-import Container from "./products_container/Container";
+import Container from "./content/Container";
 
 
 export function Products() {

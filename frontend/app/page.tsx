@@ -1,10 +1,16 @@
-import Hero from "./components/sections/Hero/Hero";
+import Header from "./components/common/Header"
+import Nav from "./components/common/Navbar"
+import Main from "./components/pages/Hero/Main"
+
 
 export default function Home() {
   return (
-    <>
-      <Hero/>
-    </>
+        <section className="h-screen w-screen flex flex-col items-center justify-center bg-white">
+            <Header/>
+            <Nav/>
+            <Main/>
+        </section>
+
 
   );
 }
