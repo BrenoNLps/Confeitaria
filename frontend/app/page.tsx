@@ -5,12 +5,10 @@ import Main from "./components/pages/Hero/content/Main"
 
 export default function Home() {
   return (
-        <section className="h-screen w-screen flex flex-col items-center justify-center bg-white">
+        <div className="page-container">
             <Header/>
             <Nav/>
             <Main/>
-        </section>
-
-
+        </div>
   );
 }
