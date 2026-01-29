@@ -1,8 +1,11 @@
+import SideRibbon from "@/app/components/(pages)/contact/SideRibbon";
+import Container from "@/app/components/(pages)/contact/Container";
 
 export default function About() {
     return (
         <main className="main-content">
-            <h1 className="text-black">About Us</h1>
+            <SideRibbon />
+            <Container />
         </main>
     );
 }
