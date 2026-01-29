@@ -1,7 +1,8 @@
-export default function Container{  
+export default function Container(){  
     return (    
-        <div className="bg-pink-600">
-            
-        </div>
+        <section>
+            <div className="w-[50%] h-full bg-yellow-500">oi</div>
+            <div className="w-[50%] h-full bg-yellow-800">oi</div>
+        </section>
     );
-} 
+}
