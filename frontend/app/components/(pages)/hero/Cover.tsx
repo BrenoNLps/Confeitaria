@@ -6,7 +6,8 @@ export default function Image() {
                 <img src="images/bolo.png" alt="Bolo" className="h-full w-full object-cover md:rounded-none rounded-2xl border-5 border-black" />
             </div>
 
-            <button className="mt-6 w-[70%] md:w-[30%] h-12 font-bold rounded-2xl bg-black text-white hover:bg-pink-800 transition-colors block md:hidden">Ver Cardápio
+            <button className="mt-6 w-[70%] md:w-[30%] h-12 font-bold rounded-2xl bg-black text-white hover:bg-pink-700 transition-colors block md:hidden">
+                <a href="/products">Ver Cardápio</a>
             </button>
         </div>  
     );
