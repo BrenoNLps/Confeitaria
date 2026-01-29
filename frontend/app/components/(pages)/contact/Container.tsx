@@ -1,8 +1,13 @@
+import Article from "./Article";
+import Cover from "./Cover";
+
 export default function Container(){  
     return (    
         <section>
-            <div className="w-[50%] h-full bg-yellow-500">oi</div>
-            <div className="w-[50%] h-full bg-yellow-800">oi</div>
+            <Cover/>
+            <Article/>
         </section>
     );
 }
+
+// <img src="images/confeiteira.jpg" alt="Confeiteira" className="w-full object-cover rounded-full border-5 border-black" />
