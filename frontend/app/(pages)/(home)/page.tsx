@@ -3,7 +3,7 @@ import Container from "@/app/components/(pages)/hero/Container";
 
 export default function Home() {
   return (
-    <main className="main-content">
+    <main>
       <SideRibbon />
       <Container />
     </main>

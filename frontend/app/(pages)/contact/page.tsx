@@ -3,7 +3,7 @@ import Container from "@/app/components/(pages)/contact/Container";
 
 export default function About() {
     return (
-        <main className="main-content">
+        <main>
             <SideRibbon />
             <Container />
         </main>
