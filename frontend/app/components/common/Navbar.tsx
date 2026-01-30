@@ -1,4 +1,4 @@
-import link from "next/link";
+import Toggle from "./(header)/Toggle";
 
 export default function Nav() { 
     return (
