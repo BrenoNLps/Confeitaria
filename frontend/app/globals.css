@@ -58,6 +58,7 @@ section{
   flex-col 
   md:flex-row 
   items-center 
+  justify-center
   relative
 }
 
