@@ -1,0 +1,36 @@
+@reference "tailwindcss";
+
+
+.carousel {
+    @apply 
+    bg-red-500
+    flex 
+    md:h-[25rem]
+    md:w-[76rem]
+    h-[18rem]
+    w-[18rem]
+    overflow-hidden
+    transition-transform 
+    duration-500 
+    ease-in-out
+    ;
+}
+
+.carousel li {
+    @apply
+    md:w-[25rem]
+    sm:w-[300rem]
+    w-[18rem]
+    aspect-square
+    mr-[0.5rem]
+    ;
+}
+
+.carousel img {
+    @apply
+    w-full 
+    h-full 
+    object-cover 
+    rounded-lg 
+    shadow-xl;
+}
