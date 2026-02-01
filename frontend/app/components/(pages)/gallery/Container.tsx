@@ -1,5 +1,5 @@
 import CarouselContainer from "./(carousel)/CarouselContainer";
-import Select from "./Select";
+import Select from "./(select)/Select";
 
 export default function Container(){
     return(
