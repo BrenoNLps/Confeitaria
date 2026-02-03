@@ -2,9 +2,7 @@
 
 
 .carousel {
-    @apply 
-    bg-red-500
-    flex 
+    @apply     flex 
     md:h-[25rem]
     md:w-[76rem]
     h-[18rem]
