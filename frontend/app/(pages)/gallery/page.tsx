@@ -1,4 +1,4 @@
-import Container from "@/app/components/(pages)/gallery/Container";
+import Container from "@/components/(pages)/gallery/Container";
 
 export default function Gallery() {
     return (

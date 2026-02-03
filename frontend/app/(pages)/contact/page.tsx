@@ -1,5 +1,5 @@
-import SideRibbon from "@/app/components/(pages)/contact/SideRibbon";
-import Container from "@/app/components/(pages)/contact/Container";
+import SideRibbon from "@/components/(pages)/contact/SideRibbon";
+import Container from "@/components/(pages)/contact/Container";
 
 export default function About() {
     return (
