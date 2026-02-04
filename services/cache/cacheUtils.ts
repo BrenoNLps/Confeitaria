@@ -11,5 +11,27 @@ export function isCacheTimeValid(pasta:string): boolean{
 }
 
 
+export function getCache(pasta: string): string[] | null {
+    const cachePath = `${pasta}_imagens`;
+    const cache = localStorage.getItem(cachePath);
+
+    if (cache && isCacheTimeValid(pasta)) { 
+        try{
+            return JSON.parse(cache);
+        }
+        catch{
+            return null; 
+        }
+    }return null; 
+}
+
+
+export function setCache(pasta: string, urls: string[]): void {
+    const cache = `${pasta}_imagens`;
+    const cacheTempo = `${pasta}_tempo`;
+
+    localStorage.setItem(cache, JSON.stringify(urls));
+    localStorage.setItem(cacheTempo, Date.now().toString());
+}
 
 
