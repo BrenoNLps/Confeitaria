@@ -1,8 +1,10 @@
 
+import { useState } from 'react';
 import Carousel from './Carousel';
+import { cakeType } from '../(select)/Select';
 
 type Props = {
-    categoria: string;
+    categoria: cakeType;
 };
 
 

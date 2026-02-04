@@ -5,7 +5,7 @@ import { cakeType } from "../(select)/Select";
 import { useFirebase } from "@/hooks/useFirebase";
 
 type Props ={
-    categoria: string;
+    categoria: cakeType;
 }
 
 export default function Carousel({ categoria }: Props) {
@@ -21,10 +21,8 @@ export default function Carousel({ categoria }: Props) {
             {!loading && images.length > 0 ? (images.map((url, index) => (
                 <li key={index}>
                     <img src={url} alt={`Imagem ${index + 1}`} />
-                </li>
-            ))
-            ) :
-            (
+                </li>)))
+            :(
                 <>
                 <li><img src="/images/carregando_bolo.gif" alt="Fallback 1" /></li>
                 <li><img src="/images/carregando_bolo.gif" alt="Fallback 2" /></li>
