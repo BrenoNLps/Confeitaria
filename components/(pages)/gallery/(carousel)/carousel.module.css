@@ -3,12 +3,23 @@
 
 .carousel {
     @apply    
+    overflow-hidden 
+    w-[25rem] 
+    md:w-[76rem] 
+    h-full 
+    flex 
+    items-center 
+    justify-center
+    ;
+}
+
+.carousel ul{
+    @apply
     flex 
     md:h-[25rem]
     md:w-[76rem]
     h-[18rem]
     w-[18rem]
-    overflow-hidden
     transition-transform 
     duration-500 
     ease-in-out
