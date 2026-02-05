@@ -1,23 +1,19 @@
 "use client"
-export enum cakeType {
-    COMMEMORATIVE = "commemorative",
-    MONTHLY = "monthly",
-    SIMPLE = "simple",
-    SPECIAL = "special",
-    THEMATIC = "thematic",
-}
 
-type Props = {
-    value : cakeType;
-    onChange: (v: cakeType) => void;
-}
+import { cakeType } from "../(carousel)/CarouselConfig";
+import { useCarousel } from "../(carousel)/CarouselContext";
 
-export default function Select({ value, onChange }: Props){
+
+
+
+export default function Select(){
+    const { categoria, setCategoria } = useCarousel();
+
     return (
         <div className="w-full h-[10%] flex justify-center items-center " >
             <select 
-            value={value} 
-            onChange={(e) => onChange(e.target.value as cakeType)}
+            value={categoria} 
+            onChange={(e) => setCategoria(e.target.value as cakeType)}
             className="h-full w-[90%] bg-black text-white text-center bord-0 appearance-none hover:bg-rose-400 hover:text-white focus:outline-0 } "
 
             >

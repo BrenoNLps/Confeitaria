@@ -1,14 +1,11 @@
 "use client";
-
 import styles from "./carousel.module.css";
-import { cakeType } from "../(select)/Select";
 import { useFirebase } from "@/hooks/useFirebase";
+import { useCarousel } from "./CarouselContext";
 
-type Props ={
-    categoria: cakeType;
-}
 
-export default function Carousel({ categoria }: Props) {
+export default function Carousel() {
+    const { categoria, index, imgWidth } = useCarousel();
     const { data: images, error, loading } = useFirebase(
         `public/gallery/cakes/${categoria}`
     );

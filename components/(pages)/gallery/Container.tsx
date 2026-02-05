@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import CarouselContainer from "./(carousel)/CarouselContainer";
-import Select, { cakeType } from "./(select)/Select";
+import Select from "./(select)/Select";
+import { CarouselProvider } from "./(carousel)/CarouselContext";
 
 export default function Container(){
-    const [categoria, setCategoria] = useState(cakeType.SIMPLE);
 
 
     return(
-        <div className="h-full w-full  flex flex-col justify-center items-center">
-            <Select value={categoria} onChange={setCategoria}/>
-            <CarouselContainer categoria={categoria}/>
-        </div>
+        <CarouselProvider>
+            <div className="h-full w-full  flex flex-col justify-center items-center">
+                <Select/>
+                <CarouselContainer/>
+            </div>
+        </CarouselProvider>
+
     );
 }
 
