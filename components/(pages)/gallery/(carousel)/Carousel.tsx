@@ -8,7 +8,11 @@ export default function Carousel() {
     const { categoria, index, imgWidth }  = useCarousel();
     const CAMINHO_FIREBASE_GALERIA = `public/gallery/cakes/${categoria}`;
     const { data: images, error, loading } = useFirebase(CAMINHO_FIREBASE_GALERIA);
-    
+
+    //Verifica se a tela esta em mobile ou desktop
+    useEffect(() => {setImgWidth(window.innerWidth >= 768 ? imgSizeDesktop : imgSizeMobile);}, [setImgWidth]);
+
+
     return (
         <div className={styles.carousel}>
             {error && <p className="text-red-500">{error}</p>}
