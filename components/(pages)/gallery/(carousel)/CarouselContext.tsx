@@ -7,7 +7,7 @@ const CarouselContext = createContext<CarouselContextType | null>(null);
 
 type CarouselContextType = {
     categoria : cakeType ; setCategoria : (c: cakeType) => void;
-    index     : number   ; setIndex     : (i: number  ) => void;
+    index     : number   ; setIndex : React.Dispatch<React.SetStateAction<number>>;
     imgWidth  : number   ; setImgWidth  : (w: number  ) => void;
     totalImgs : number   ; setTotalImgs : (w: number  ) => void;
 };
