@@ -10,6 +10,13 @@ export default function Carousel() {
     const { categoria, index, imgWidth,setImgWidth,totalImgs, setTotalImgs }  = useCarousel();
     const CAMINHO_FIREBASE_GALERIA = `public/gallery/cakes/${categoria}`;
     const { data: images, error, loading } = useFirebase(CAMINHO_FIREBASE_GALERIA);
+    
+    //Pega total de imagens
+    useEffect(() => {
+        if (!loading) {
+            const count = images.length > 0 ? images.length : 0;
+            setTotalImgs(window.innerWidth >= 768 ? (count - INDICE_CARROSSEL_DESKTOP_NEXT_DESK): (count - INDICE_CARROSSEL_DESKTOP_NEXT_MOBI))}
+        }, [images, loading, setTotalImgs]);
 
     //Verifica se a tela esta em mobile ou desktop
     useEffect(() => {setImgWidth(window.innerWidth >= 768 ? imgSizeDesktop : imgSizeMobile);}, [setImgWidth]);
