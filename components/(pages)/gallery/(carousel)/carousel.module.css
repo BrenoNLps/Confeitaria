@@ -47,7 +47,7 @@
 
 .button{
     @apply
-    z-10 
+    z-2 
     text-9xl 
     absolute 
     text-white 

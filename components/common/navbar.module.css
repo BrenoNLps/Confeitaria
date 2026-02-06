@@ -1,0 +1,65 @@
+@reference "tailwindcss";
+
+
+.navbar_standard{
+    @apply
+    h-[10%] 
+    w-screen 
+    md:block
+    hidden 
+}
+
+.navbar_standard ul {
+    @apply
+    h-full 
+    w-full 
+    flex 
+    justify-center 
+    items-center 
+    gap-10
+    text-black 
+    font-bold 
+    text-lg
+}
+
+
+.navbar_toggle{
+    @apply
+    w-full 
+    h-full 
+    fixed 
+    inset-0 
+    z-3
+
+    flex
+    items-center
+    justify-center
+    bg-black
+    ;
+}
+
+.navbar_toggle ul{
+    @apply
+    h-8/12
+    w-11/12
+    font-bold 
+    text-lg
+    flex
+    flex-col
+    items-center
+    justify-center
+    gap-3
+    ; 
+}
+
+.navbar_toggle li{
+    @apply
+    w-full
+    bg-white/5
+    text-white
+    flex-1
+    flex
+    items-center
+    justify-center
+    ;
+}

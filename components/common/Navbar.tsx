@@ -1,9 +1,10 @@
 import Toggle from "./(header)/Toggle";
+import styles from "./navbar.module.css"
 
 export default function Nav() { 
     return (
-        <nav className="h-[10%] w-screen hidden md:block">
-            <ul className="h-full w-full flex justify-center items-center gap-10 text-black font-bold text-lg">
+        <nav className={styles.navbar_toggle}>
+            <ul>
                 <li><a href="/" >Home</a></li>
                 <li><a href="/products" >Produtos</a></li>
                 <li><a href="/contact" >Contato</a></li>
@@ -11,4 +12,4 @@ export default function Nav() {
             </ul>
         </nav>
     );
-}   
+}
