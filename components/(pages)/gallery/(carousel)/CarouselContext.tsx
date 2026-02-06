@@ -1,25 +1,25 @@
 'use client'
-import { createContext, useContext, useState } from "react";
-import { cakeType, imgSizeMobile } from "./CarouselConfig";
+import { createContext, useContext, useEffect, useState } from "react";
+import { cakeType, imgSizeDesktop, imgSizeMobile } from "./CarouselConfig";
 
 
 const CarouselContext = createContext<CarouselContextType | null>(null);
 
 type CarouselContextType = {
-    categoria: cakeType ; setCategoria: (c: cakeType) => void;
-    index: number       ; setIndex: (i: number) => void;
-    imgWidth: number    ; setImgWidth: (w: number) => void;
+    categoria : cakeType ; setCategoria : (c: cakeType) => void;
+    index     : number   ; setIndex     : (i: number  ) => void;
+    imgWidth  : number   ; setImgWidth  : (w: number  ) => void;
 };
 
 export function CarouselProvider({ children }: { children: React.ReactNode }) {
-    const [categoria, setCategoria] = useState(cakeType.SIMPLE);
-    const [index, setIndex] = useState(0);
-    const [imgWidth, setImgWidth] = useState(imgSizeMobile);
+    const [categoria, setCategoria ] = useState(cakeType.SIMPLE);
+    const [index    , setIndex     ] = useState(       0       );
+    const [imgWidth , setImgWidth  ] = useState( imgSizeMobile );
 
     return (
-    <CarouselContext.Provider value={{ categoria, setCategoria, index, setIndex, imgWidth, setImgWidth }}>
-        {children}
-    </CarouselContext.Provider>
+        <CarouselContext.Provider value={{ categoria, setCategoria, index, setIndex, imgWidth, setImgWidth }}>
+            {children}
+        </CarouselContext.Provider>
     );
 }
 
