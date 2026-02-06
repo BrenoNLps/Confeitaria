@@ -20,7 +20,7 @@ export default function Select(){
             <select 
             value={categoria} 
             onChange={(e) => setCategoria(e.target.value as cakeType)}
-            className="h-full w-full md:w-[90%] bg-black text-white text-center bord-0 appearance-none hover:bg-red-400 hover:text-white focus:outline-0 } "
+            className="h-full w-full md:w-[90%] bg-black text-white text-center bord-0 appearance-none hover:bg-rose-400 hover:text-white focus:outline-0 } "
             >
                 <option value="" disabled selected hidden>Escolha ▼</option>
                 <option value={cakeType.SIMPLE}>Simples</option>

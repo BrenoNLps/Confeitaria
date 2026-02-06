@@ -34,7 +34,7 @@
     flex
     items-center
     justify-center
-    bg-rose-400
+    bg-white
     ;
 }
 
@@ -55,9 +55,9 @@
 .navbar_toggle li{
     @apply
     w-full
-    bg-black/7
-    hover:bg-black/20
-    text-white
+    bg-black/4
+    hover:bg-black/10
+
     flex-1
     flex
     rounded-4xl
@@ -71,5 +71,6 @@
     justify-center
     w-full
     h-full
+    text-rose-500
     ;
 }
