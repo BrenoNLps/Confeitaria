@@ -10,21 +10,26 @@ export default function Select(){
     const { categoria, setCategoria } = useCarousel();
 
     return (
-        <div className="w-full h-[10%] flex justify-center items-center " >
+        <div className="w-full h-[10%] flex justify-center items-center flex-col " >
+
+            <div className="w-full md:w-[90%] bg-black text-white flex justify-between">
+                <h1 className="ml-[2%]"> Categoria</h1>
+                <h1 className="mr-[2%]"> ▼</h1>
+            </div>
+
             <select 
             value={categoria} 
             onChange={(e) => setCategoria(e.target.value as cakeType)}
-            className="h-full w-full md:w-[90%] bg-black text-white text-center bord-0 appearance-none hover:bg-rose-400 hover:text-white focus:outline-0 } "
-
+            className="h-full w-full md:w-[90%] bg-black text-white text-center bord-0 appearance-none hover:bg-red-400 hover:text-white focus:outline-0 } "
             >
                 <option value="" disabled selected hidden>Escolha ▼</option>
-                <option value={cakeType.THEMATIC}>Temático</option>
                 <option value={cakeType.SIMPLE}>Simples</option>
+                <option value={cakeType.THEMATIC}>Temático</option>
                 <option value={cakeType.SPECIAL}>Especial</option>
                 <option value={cakeType.MONTHLY}>MesVersário</option>
                 <option value={cakeType.COMMEMORATIVE}>Comemorativo</option>
             </select>
-            
         </div>
     );
 }
+//            <span className="text-sm text-gray-500">Selecione para mudar a categoria</span>
