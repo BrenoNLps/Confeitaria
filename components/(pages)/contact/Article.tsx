@@ -14,7 +14,7 @@ export default function Text(){
                     <h3 className="text-base md:text-lg font-bold mb-2">Instagram 📸</h3>
                     <p className="text-sm md:text-base mb-4">
                         Clique aqui : 
-                        <a href="https://www.instagram.com/marizanalopes?igsh=eTF2aXdsdGl1MjB2" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:underline"> @marizanalopes</a>
+                        <a href="https://www.instagram.com/marizanalopes?igsh=MTA2bHB0bXAycDc5eg==" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:underline"> @marizanalopes</a>
                     </p>
 
                     <h3 className="text-base md:text-lg font-bold mb-2">Cidade 📍</h3>
