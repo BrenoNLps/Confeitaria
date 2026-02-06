@@ -3,7 +3,7 @@
 
 .navbar_standard{
     @apply
-    h-[10%] 
+    h-[50%] 
     w-screen 
     md:block
     hidden 

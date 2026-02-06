@@ -8,7 +8,7 @@ import Nav from "./Navbar";
 export default function Header() {
     const [open, setOpen] = useState(false);
     return (
-        <header className="h-[15%] md:h-[20%] w-screen  md:border-b-4 border-b-none flex md:flex-col items-center  border-black md:justify-center justify-center">
+        <header className="h-[15%] md:h-[20%] w-screen  flex md:flex-col items-center  border-black md:justify-center justify-center">
             <Toggle onToggle={() => setOpen(!open)}/>
             <Logo/>
             <Nav open={open} />
