@@ -43,3 +43,14 @@
     rounded-lg 
     shadow-xl;
 }
+
+.button{
+    @apply
+    z-10 
+    text-9xl 
+    absolute 
+    text-white 
+    hover:text-black 
+    drop-shadow-[0px_3px_3px_black] 
+    ;
+}
