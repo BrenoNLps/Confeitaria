@@ -1,6 +1,5 @@
 @reference "tailwindcss";
 
-
 .carousel {
     @apply    
     overflow-hidden 
