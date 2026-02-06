@@ -18,9 +18,3 @@ export default function Container(){
 
     );
 }
-
-/*
-
-fixed inset-0 bg-black opacity-85 flex items-center justify-center z-50 
-
-*/

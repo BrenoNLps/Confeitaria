@@ -28,12 +28,3 @@ export default function Select(){
         </div>
     );
 }
-
-/*
-focus:outline-none 
-focus:ring-0 
-focus:ring-amber-500 
-pr-10
-
-
-*/
