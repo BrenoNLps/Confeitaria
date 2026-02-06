@@ -23,11 +23,11 @@ export default function Select(){
             className="h-full w-full md:w-[90%] bg-black text-white text-center bord-0 appearance-none hover:bg-rose-400 hover:text-white focus:outline-0 } "
             >
                 <option value="" disabled selected hidden>Escolha ▼</option>
-                <option value={cakeType.SIMPLE}>Simples</option>
-                <option value={cakeType.THEMATIC}>Temático</option>
-                <option value={cakeType.SPECIAL}>Especial</option>
-                <option value={cakeType.MONTHLY}>MesVersário</option>
-                <option value={cakeType.COMMEMORATIVE}>Comemorativo</option>
+                <option value={cakeType.SIMPLE}>Bolo simples</option>
+                <option value={cakeType.THEMATIC}>Bolo temático</option>
+                <option value={cakeType.SPECIAL}>Bolo especial</option>
+                <option value={cakeType.MONTHLY}>Bolo mesVersário</option>
+                <option value={cakeType.COMMEMORATIVE}>Bolo comemorativo</option>
             </select>
         </div>
     );
