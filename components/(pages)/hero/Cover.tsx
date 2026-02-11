@@ -1,9 +1,16 @@
 
-export default function Image() {
+import Image from "next/image";
+
+export default function Cover() {
     return (
         <div className="w-full h-[70%] md:h-full md:flex-1 justify-center items-center flex flex-col ">
-            <div className=" w-[70%] md:w-[60%] h-[50%] md:h-[80%] justify-center items-center flex">
-                <img src="images/bolo.png" alt="Bolo" className="h-full w-full object-cover md:rounded-none rounded-2xl border-5 border-black" />
+            <div className=" w-[70%] md:w-[60%] h-[50%] md:h-[80%] justify-center items-center flex relative">
+                <Image
+                    src="/images/bolo.png" 
+                    alt="Bolo" 
+                    fill
+                    className="object-cover md:rounded-none rounded-2xl border-5 border-black" 
+                />
             </div>
 
 

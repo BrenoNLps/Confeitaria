@@ -72,14 +72,3 @@ section{
   flex
   ;
 }
-
-.ribbon{
-  @apply
-  hidden 
-  md:block 
-  h-full 
-  w-[25%] 
-  md:w-[25%] 
-  absolute
-  bg-rose-400   
-}
