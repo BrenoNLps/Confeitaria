@@ -1,14 +1,14 @@
-import Toggle from "./Toggle";
-import styles from "./navbar.module.css"
 
+import styles from "./navbar.module.css"
+import Link from "next/link";
 export default function Nav({ open }: { open: boolean }) { 
     return (
         <nav className={open ? styles.navbar_toggle : styles.navbar_standard}>
             <ul>
-                <li><a href="/" >Início</a></li>
-                <li><a href="/products" >Produtos</a></li>
-                <li><a href="/contact" >Contato</a></li>
-                <li><a href="/gallery" >Galeria</a></li>
+                <li><Link href="/" >Início</Link></li>
+                <li><Link href="/products">Produtos</Link></li>
+                <li><Link href="/contact" >Contato</Link></li>
+                <li><Link href="/gallery" >Galeria</Link></li>
             </ul>
         </nav>
     );
