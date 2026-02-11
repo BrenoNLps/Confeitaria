@@ -1,5 +1,4 @@
-
-import Container from "@/components/(pages)/hero/Container";
+import Container from "@/components/pages/hero/Container";
 import SideRibbon from "@/components/common/SiderRibbon";
 
 export default function Home() {
