@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import Toggle from "./Toggle";
+import Toggle from "./navbar/Toggle";
 import Logo from "./Logo";
 import { useState } from "react";
-import Nav from "./Navbar";
+import Nav from "./navbar/Navbar";
 
 export default function Header() {
     const [open, setOpen] = useState(false);
     return (
         <header className="h-[15%] md:h-[20%] w-screen  flex md:flex-col items-center  border-black md:justify-center justify-center">
-            <Toggle onToggle={() => setOpen(!open)}/>
-            <Logo/>
-            <Nav open={open} />
+        <Toggle onToggle={() => setOpen(!open)} />
+        <Logo />
+        <Nav open={open} />
         </header>
     );
 }
