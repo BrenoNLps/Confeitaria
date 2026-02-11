@@ -1,10 +1,10 @@
-import SideRibbon from "@/components/(pages)/contact/SideRibbon";
 import Container from "@/components/(pages)/contact/Container";
+import SideRibbon from "@/components/common/SiderRibbon";
 
-export default function About() {
+export default function Contact() {
     return (
         <main>
-            <SideRibbon />
+            <SideRibbon className="left-0" />
             <Container />
         </main>
     );
