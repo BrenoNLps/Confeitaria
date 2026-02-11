@@ -8,10 +8,10 @@ import { CarouselProvider } from "./carousel/CarouselContext";
 export default function Container() {
   return (
     <CarouselProvider>
-      <div className="h-full w-full  flex flex-col justify-center items-center">
+      <section className="flex-col">
         <Select />
         <CarouselContainer />
-      </div>
+      </section>
     </CarouselProvider>
   );
 }

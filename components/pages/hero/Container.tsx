@@ -3,7 +3,7 @@ import Cover from "./Cover";
 
 export default function MainContainer() {
     return (
-        <section>
+        <section className="flex-col  md:flex-row ">
             <Article/>
             <Cover/>
         </section>
