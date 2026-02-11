@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import CarouselContainer from "./carousel/CarouselContainer";
 import Select from "./select/Select";
 import { CarouselProvider } from "./carousel/CarouselContext";
