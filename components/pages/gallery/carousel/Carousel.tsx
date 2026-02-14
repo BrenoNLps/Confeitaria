@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useFirebase } from "@/hooks/useFirebase";
 import { cakeType } from "./CarouselConfig";
 
@@ -15,7 +16,7 @@ interface CarouselProps {
 export default function Carousel({ categoria }: CarouselProps) {
     const CAMINHO_FIREBASE_GALERIA = `public/gallery/cakes/${categoria}`;
     const { data: images, error, loading } = useFirebase(CAMINHO_FIREBASE_GALERIA);
-    
+
     const placeholderImages = ["/images/carregando_bolo.gif","/images/carregando_bolo.gif","/images/carregando_bolo.gif"];
     const imagens = !loading && images.length > 0 ? images : placeholderImages;
 
@@ -23,7 +24,7 @@ export default function Carousel({ categoria }: CarouselProps) {
 
     
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-full relative">
             <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={8}
@@ -45,10 +46,12 @@ export default function Carousel({ categoria }: CarouselProps) {
             >
                 {imagens.map((url, i) => (
                     <SwiperSlide key={`${categoria}-${i}`}>
-                        <img 
+                        <Image 
                             src={url} 
                             alt={loading ? `Carregando imagem ${i + 1}` : `Bolo ${categoria} ${i + 1}`}
-                            className="w-full h-full object-cover rounded-lg shadow-xl"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            className="object-cover rounded-lg shadow-xl"
                         />
                     </SwiperSlide>
                 ))}
