@@ -19,16 +19,6 @@
   }
 }
 
-/*
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-*/
-
-
-
 body{
   @apply 
   h-screen 
@@ -69,4 +59,26 @@ section{
   items-start
   flex
   ;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1)) !important;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #fb7185 !important;
+}
+
+/* Cor da paginação */
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: black !important;
+  opacity: 1 !important;
 }
