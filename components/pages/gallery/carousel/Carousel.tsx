@@ -1,8 +1,10 @@
 "use client";
-import styles from "./carousel.module.css";
 import { useFirebase } from "@/hooks/useFirebase";
-import { useCarousel } from "./CarouselContext";
-import { imgSizeDesktop, imgSizeMobile, INDICE_CARROSSEL_DESKTOP_NEXT_DESK, INDICE_CARROSSEL_DESKTOP_NEXT_MOBI, marginSize } from "./CarouselConfig";
+import { cakeType } from "./CarouselConfig";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 
@@ -21,19 +23,36 @@ export default function Carousel({ categoria }: CarouselProps) {
 
     
     return (
-        <div className={styles.carousel} >
-            {error && <p className="text-red-500">{error}</p>}
-            <ul style={{transform: `translateX(-${index * (imgWidth + marginSize)}rem)`}}> 
-                {!loading && images.length > 0 ? (images.map((url, i) => (
-                    <li key={url}><img src={url} alt={`Imagem ${i + 1}`} /></li>
-                ))) : 
-                (<>
-                    <li><img src="/images/carregando_bolo.gif" alt="Fallback 1" /></li>
-                    <li><img src="/images/carregando_bolo.gif" alt="Fallback 2" /></li>
-                    <li><img src="/images/carregando_bolo.gif" alt="Fallback 3" /></li>
-                </>)
-                }
-            </ul>
+        <div className="w-full h-full">
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={8}
+                slidesPerView={1}
+                navigation
+                pagination={{ 
+                    clickable: true,
+                    dynamicBullets: true,
+                }}
+                breakpoints={{
+                    768: { 
+                        slidesPerView: 3,
+                        spaceBetween: 8,
+                    },
+                }}
+                grabCursor={true}
+                keyboard={{ enabled: true }}
+                className="w-full h-full"
+            >
+                {imagens.map((url, i) => (
+                    <SwiperSlide key={`${categoria}-${i}`}>
+                        <img 
+                            src={url} 
+                            alt={loading ? `Carregando imagem ${i + 1}` : `Bolo ${categoria} ${i + 1}`}
+                            className="w-full h-full object-cover rounded-lg shadow-xl"
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
 }
