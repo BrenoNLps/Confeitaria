@@ -3,25 +3,23 @@ import styles from "./carousel.module.css";
 import { useFirebase } from "@/hooks/useFirebase";
 import { useCarousel } from "./CarouselContext";
 import { imgSizeDesktop, imgSizeMobile, INDICE_CARROSSEL_DESKTOP_NEXT_DESK, INDICE_CARROSSEL_DESKTOP_NEXT_MOBI, marginSize } from "./CarouselConfig";
-import { useEffect } from "react";
+import 'swiper/css/pagination';
+import 'swiper/css';
 
+interface CarouselProps {
+    categoria: cakeType;
+}
 
-export default function Carousel() {
-    const { categoria, index, imgWidth,setImgWidth,totalImgs, setTotalImgs }  = useCarousel();
+export default function Carousel({ categoria }: CarouselProps) {
     const CAMINHO_FIREBASE_GALERIA = `public/gallery/cakes/${categoria}`;
     const { data: images, error, loading } = useFirebase(CAMINHO_FIREBASE_GALERIA);
     
-    //Pega total de imagens
-    useEffect(() => {
-        if (!loading) {
-            const count = images.length > 0 ? images.length : 0;
-            setTotalImgs(window.innerWidth >= 768 ? (count - INDICE_CARROSSEL_DESKTOP_NEXT_DESK): (count - INDICE_CARROSSEL_DESKTOP_NEXT_MOBI))}
-        }, [images, loading, setTotalImgs]);
+    const placeholderImages = ["/images/carregando_bolo.gif","/images/carregando_bolo.gif","/images/carregando_bolo.gif"];
+    const imagens = !loading && images.length > 0 ? images : placeholderImages;
 
-    //Verifica se a tela esta em mobile ou desktop
-    useEffect(() => {setImgWidth(window.innerWidth >= 768 ? imgSizeDesktop : imgSizeMobile);}, [setImgWidth]);
+    if (error) {return <p className="text-red-500 text-center">{error}</p>;}
 
-
+    
     return (
         <div className={styles.carousel} >
             {error && <p className="text-red-500">{error}</p>}
