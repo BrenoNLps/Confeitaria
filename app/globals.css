@@ -32,7 +32,7 @@ body{
 
 main{
   @apply
-  h-[90%] 
+  h-[85%] 
   md:h-[80%] 
   w-screen 
   flex 
