@@ -21,6 +21,10 @@ export default function CarouselContainer(){
                     </button>
                 ))}
             </div>
+
+            <div className="w-full h-[18rem] md:h-[25rem]">
+                <Carousel categoria={categoria} />
+            </div>
         </div>
     );
 }
