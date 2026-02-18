@@ -1,9 +1,15 @@
-import Article from "./Article";
+import ProductsContainer from "./ProductsContainer";
 
-export default function Container(){
+
+export default function Container() {
     return (
-        <section className="bg-amber-800  flex-col  md:flex-row ">
-            <Article/>
+        <section className="flex-col flex">
+            <ProductsContainer/>
+            <ProductsContainer/>
+            <ProductsContainer/>
+            <ProductsContainer/>
+            <ProductsContainer/>
+            <ProductsContainer/>
         </section>
-    );
+    )
 }

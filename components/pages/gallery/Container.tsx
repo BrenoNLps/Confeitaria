@@ -6,9 +6,9 @@ import Carousel from "./carousel/Carousel";
 
 
 export default function Container() {
-      const [categoria, setCategoria] = useState<cakeType>(cakeType.SIMPLE);
-  return (
-      <section className="h-full flex items-center justify-cente ">
+const [categoria, setCategoria] = useState<cakeType>(cakeType.SIMPLE);
+    return (
+    <section className="h-full flex items-center justify-cente ">
                 <div className="flex-1 flex flex-col w-full max-w-7xl mx-auto  ">
                     <div className="flex gap-2 mb-4 justify-center flex-wrap ">
                         {categorias.map(({ tipo, label }) => (
@@ -25,6 +25,6 @@ export default function Container() {
                         <Carousel categoria={categoria} />
                     </div>
                 </div>
-      </section>
-  );
+    </section>
+);
 }
