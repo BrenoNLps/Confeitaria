@@ -3,7 +3,7 @@ import SideRibbon from "@/components/common/SiderRibbon";
 
 export default function Contact() {
   return (
-    <main>
+    <main className="screen-size-page">
       <SideRibbon className="left-0" />
       <Container />
     </main>

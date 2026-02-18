@@ -19,36 +19,17 @@
   }
 }
 
-body{
+
+.screen-size-page{
   @apply 
-  h-screen 
-  w-screen 
   flex 
-  flex-col 
-  items-center 
-  justify-center
-  bg-gray-50
+  flex-1 
+  w-full
+  h-full
+  relative 
 }
 
-main{
-  @apply
-  h-[85%] 
-  md:h-[80%] 
-  w-screen 
-  flex 
-  items-center 
-  relative
-}
 
-section{
-  @apply
-  w-full 
-  h-full 
-  flex 
-  items-center 
-  justify-center
-  relative
-}
 
 .title{
   @apply 
