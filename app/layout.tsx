@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen w-screen flex flex-col  h-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen w-screen flex flex-col  h-full`} style={{ minHeight: '100dvh' }}
       >
         <Header />
         {children}
